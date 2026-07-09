@@ -1,0 +1,144 @@
+---
+import Base from '../layouts/Base.astro';
+import SheetEmbed from '../components/SheetEmbed.astro';
+
+const bomSrc =
+  "https://1drv.ms/x/c/1ab10ce1b91949c7/IQQmt6OwQfT6QpA4oYtTkpdgAfTlPQh_9JBAHBvyhKrCA38?em=2&AllowTyping=True&ActiveCell='BOM%2C%20base'!B2&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True&edaebf=rslc0";
+---
+
+<Base
+  title="Denise Lin: Defense Program Cost Analysis"
+  description="Denise Lin — defense program cost analysis: a bottoms-up Bill of Materials and Cost Element Structure built for a one-way attack drone program."
+>
+  <header class="hero wrap wrap--wide">
+    <p class="eyebrow eyebrow--gold">Defense Programs &middot; Cost Analysis</p>
+    <h1 class="hero__name">Denise Lin</h1>
+    <hr class="tick" />
+    <p class="hero__lede">
+      Berkeley Haas MBA with eight years owning budgets and cost performance
+      for complex government programs. At the City of Mountain View, I direct
+      a $5M+ portfolio: securing funding, tracking costs, and building the
+      models that justify program budgets to leadership. Below is a
+      should-cost model I built for a defense program &mdash; it shows how I
+      break down a system&rsquo;s cost structure and find real ways to bring
+      cost down without cutting capability.
+    </p>
+  </header>
+
+  <section class="wrap wrap--wide portfolio" aria-labelledby="port-h">
+    <p class="eyebrow eyebrow--gold">Portfolio</p>
+    <h2 id="port-h" class="portfolio__h">
+      Drone Bill of Materials &amp; Cost Element Structure
+    </h2>
+
+    <div class="spotlight spotlight--hero">
+      <div class="spotlight__copy">
+        <p>
+          I built a Bill of Materials and Cost Element Structure depicting
+          procurement and operational costs for deployment of a Pygmy-Owl, a
+          fictitious one-way attack drone meant to emulate the Shahed-136.
+          This shows how I approach conceptualizing financial models and
+          using data to inform program decisions.
+        </p>
+        <p>
+          I used first principles to establish the format for the BOM (Tab 1
+          in the spreadsheet), with the goal of conveying information in a
+          way that is transparent/traceable and easy to read. I decided to
+          break out the major Level 1 categories of Airframe, Launch System,
+          and Ground Support Equipment so that the model has a clear sense of
+          structure. I built a bottoms-up estimate using Level 3 items, so
+          that the BOM estimate can be easily modified and improved if more
+          accurate information becomes available for any given component.
+        </p>
+        <p>
+          As someone with a background in running government programs, I
+          know that reducing cost and increasing value is critical for
+          securing government contracts. I identified potential cost
+          improvements (Tab 3) by targeting the top six cost drivers. I
+          researched feasible methods for cost reduction for these measures,
+          reducing the total cost by 56%. I did a feasibility check of the
+          estimate; I concluded the improved unit flyaway cost of $23,828 for
+          materials is reasonable, because a comparable drone model, the
+          LUCAS drone, is believed to cost $35,000 including both materials
+          and labor.
+        </p>
+        <p>
+          Lastly, I developed a Cost Element Structure to depict the
+          operational cost of deploying Pygmy-Owls at scale. The purpose of
+          this was to provide transparency into the full cost of running a
+          mission, which goes well beyond munitions costs. I developed a CES
+          as an example of a plan that could be used to justify program
+          budgets and support a sustained mission deploying the Pygmy-Owl.
+        </p>
+      </div>
+      <div class="spotlight__embed">
+        <SheetEmbed
+          hero={true}
+          height={650}
+          src={bomSrc}
+          title="Pygmy-Owl Bill of Materials and Cost Element Structure, built by Denise Lin"
+          caption="Live model: Pygmy-Owl Bill of Materials &amp; Cost Element Structure"
+        />
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap wrap--wide">
+      <p class="contact">
+        <a href="mailto:deniselihanlin@gmail.com">deniselihanlin@gmail.com</a>
+        <span aria-hidden="true" class="dot">&middot;</span>
+        <a
+          href="https://www.linkedin.com/in/denise-lin"
+          rel="me noopener"
+          target="_blank">LinkedIn</a
+        >
+      </p>
+    </div>
+  </footer>
+</Base>
+
+<style>
+  .hero {
+    padding-top: clamp(3.5rem, 10vw, 6.5rem);
+    padding-bottom: clamp(0.25rem, 1.2vw, 0.6rem);
+  }
+  .hero__name {
+    font-size: var(--step-3);
+  }
+  .hero__lede {
+    font-size: clamp(1.05rem, 1rem + 0.35vw, 1.22rem);
+    line-height: 1.5;
+    max-width: 70ch;
+    color: var(--ink);
+  }
+
+  .portfolio {
+    padding-block: clamp(0.75rem, 2vw, 1.25rem) clamp(1.5rem, 4vw, 2.6rem);
+  }
+  .portfolio__h {
+    font-size: var(--step-2);
+    margin-bottom: 1.6rem;
+    max-width: none;
+  }
+
+  .spotlight {
+    padding: clamp(1.4rem, 3vw, 2.2rem);
+    background: var(--paper-2);
+    border-radius: 12px;
+    margin-bottom: 1.6rem;
+  }
+  .spotlight--hero {
+    border: 1px solid var(--hairline);
+    border-top: 3px solid var(--california-gold);
+  }
+  .spotlight__copy > :first-child {
+    margin-top: 0;
+  }
+  .spotlight__copy p {
+    max-width: 82ch;
+  }
+  .spotlight__embed {
+    margin-top: 1.6rem;
+  }
+</style>
